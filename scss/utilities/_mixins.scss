@@ -4,15 +4,49 @@
 
 // BEM selectors
 
-
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
 
 // Media queries
 
-
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+   @else {
+   	@error "No value could be retrieved for `#{$break}`. "
+  }
+}
 
 // Generate modifier color classes
 
-
+@mixin bg-colors($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      background-color: $color;    
+    }
+  }
+}
 
 // Generating :before or :after pseudo-element shapes
 
@@ -24,8 +58,23 @@
       
 // Adjacent sibling margins
 
-
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
 
 // Grid Columns
      
-        
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    
+    // Generate column modifier classes
+    &--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}          
