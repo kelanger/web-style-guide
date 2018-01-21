@@ -17,11 +17,7 @@
     margin-top: em(24px);
   }
   @include m(logo) {
-    @media (medium) {
-     	margin-bottom: em(42px);
-    }
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 1em;
     display: block;
     margin: 0 auto;
   }

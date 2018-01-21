@@ -64,6 +64,18 @@ $ui-colors: (
 	info    : $purple-majesty
 );
 
+// Grid Colors
+
+$grid-colors: (
+	3  : lighten($purple-majesty, 15%),
+	4  : lighten($sky-blue, 10%),
+	5  : lighten($emerald, 15%),
+	6  : darken($sky-blue, 15%),
+	7  : lighten($sunglo, 5%),
+	8  : lighten($coral, 5%),
+	12 : lighten($fountain-blue, 20%)
+);
+
 // Text
 
 $base__font-size : 16px;

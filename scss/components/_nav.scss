@@ -4,7 +4,10 @@
 
 .nav {
 	margin-top: em(20px);
-	margin-bottom: 5em;
+	margin-bottom: .5em;
+  @include mq(large){
+    margin-left: 5em;
+  }
   
   @include e(item) {
     @extend %nav-item-horz;

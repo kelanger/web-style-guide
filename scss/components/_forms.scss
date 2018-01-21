@@ -32,8 +32,13 @@
 		}
 	}
 
-	@include e(btn) {
-		@extend %btn;
-		background: $color-primary;
+	.form__input ~ .btn--default {
+		width: 100%;
 	}
+
+	// @include e(btn) {
+	// 	width: 100%;
+	// 	@extend %btn;
+	// 	background: $color-primary;
+	// }
 }

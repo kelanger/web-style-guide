@@ -9,13 +9,16 @@
 [class^="btn--"] {
   @extend %center-align;
   @extend %btn;
-  margin-bottom: em(30px, 14px); 
+  padding-bottom: .75em;
+  padding-top: .75em;
+  margin-bottom: 2em; 
   @include mq(small) {
     width: 100%;
   }
-  @include mq(medium) { 
-    width: auto;
+  @include mq(large) { 
     display: inline-block;
-    @include doubly(20px);
+    padding-left: 4em;
+    padding-right: 4em;
+    @include doubly(40px);
   }
 }

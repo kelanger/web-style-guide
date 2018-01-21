@@ -40,7 +40,7 @@
   line-height: (46px/42px);
   margin-top: -1.5em;
   margin-bottom: 2em;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 %hdln-sec {
   color: palette(grey, light);
@@ -60,7 +60,6 @@
   text-transform: uppercase;
   font-size : em(14px);
   font-weight: $font-weight--medium;
- // transition: opacity $trns-duration;
   display: block;
   &:hover {
     opacity: .75;
