@@ -2,3 +2,27 @@
 // Images
 // ==========================================================================
 
+.img {
+  @include m(frame) {
+    border: 2px solid palette(grey, x-light);
+    padding: em(12px);
+	width: 	100%;
+
+  }
+  @include m(avatar) {
+    display: block;
+    border-radius: $br--round;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: em(24px);
+  }
+  @include m(logo) {
+    @media (medium) {
+     	margin-bottom: em(42px);
+    }
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+  }
+}

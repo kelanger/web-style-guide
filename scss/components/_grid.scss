@@ -1,5 +1,5 @@
 // ==========================================================================
-// Grid Columns
+// Grid
 // ==========================================================================
 
 // Calculate grid columns
@@ -12,7 +12,7 @@
 
 // Column styles
 
- [class^="grid__col--"] {
+[class^="grid__col--"] {
   @include mq(small)  {
     margin-top: em(12px);
     margin-bottom: em(12px);
@@ -27,4 +27,4 @@
       float: right;
     }
   }
-} 
+}
