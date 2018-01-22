@@ -14,7 +14,7 @@
 
  	&--secondary {
 		@extend %hdln-sec;
-		margin-bottom: 4em;
+		margin-bottom: 1em;
 
 		@include m(grouped) {
 			@extend %hdln-sec;

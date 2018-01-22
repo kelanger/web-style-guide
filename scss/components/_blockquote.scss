@@ -3,17 +3,17 @@
 // ==========================================================================
 
 .blockquote {
-	@mixin mq ($large) {
-		margin: em(32px, 24px) 0;
-		padding: 0 0 0 5%;
-		border-left: em(8px, 24px) solid palette(grey, xx-light); 
-		font-size: em(24px);
+	@include mq(large) {
+		margin-bottom: 0;
+		font-size : 1.35em;
+		line-height: 1.35em;
 	}
+	margin-bottom: 4em;
 	font-weight: $font-weight--medium;
 	font-style : italic;
-	font-size : em(20px);
+	font-size : 1.8em;
 	padding-left: 15px;
+	line-height: 1.2em;
 	border-left: $br--default solid $color-primary;
 	border-radius: 5px 0 0 5px;
-
 }

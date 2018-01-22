@@ -52,8 +52,10 @@
 }
 
 .grid__row>.theme__colors {
+  @include mq(large) {
+    text-align: center;
+  }
   margin: .33em 0;
   padding: .5em 1em;
   border-radius: 5px;
-  text-align: center;
 }
